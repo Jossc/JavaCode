@@ -9,5 +9,13 @@ package com.basics.agency;
  *
  */
 public interface UserService {
-    public abstract void add();
+    void add();
+
+    void sub();
+
+    void hello(String zlx);
+
+    void service(String zlx);
+
+
 }
