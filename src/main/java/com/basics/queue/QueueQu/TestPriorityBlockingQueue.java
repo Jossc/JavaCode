@@ -1,4 +1,4 @@
-package com.basics.queue.PriorityBlockingQueueQu;
+package com.basics.queue.QueueQu;
 
 import com.basics.queue.utils.User;
 
@@ -11,6 +11,10 @@ import java.util.concurrent.PriorityBlockingQueue;
  * @PROJECT_NAME: JavaCode
  * @Date: 2018/4/9
  * @author: chenzhuo
+ * PriorityBlockingQueue优先级队列
+ *  优先队列不会有阻塞 永远不会阻塞
+ *  自动扩容不会阻塞~
+ *
  */
 public class TestPriorityBlockingQueue {
 
@@ -20,7 +24,8 @@ public class TestPriorityBlockingQueue {
 
     public static  void test(){
         PriorityBlockingQueue<User> queue =
-                new PriorityBlockingQueue<User>();
+                new PriorityBlockingQueue<User>(4);
+
         User user = new User("张三",11);
         User user1 = new User("张三1",11);
         User user2 = new User("张三2",11);

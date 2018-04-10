@@ -6,4 +6,4 @@
  * PriorityBlockingQueue
  *
  */
-package com.basics.queue.PriorityBlockingQueueQu;
+package com.basics.queue.QueueQu;
