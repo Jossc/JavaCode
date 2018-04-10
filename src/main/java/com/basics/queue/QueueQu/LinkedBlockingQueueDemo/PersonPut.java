@@ -21,8 +21,8 @@ public class PersonPut {
      * 存放一个
      * @throws InterruptedException
      */
-    public void produce() throws InterruptedException {
-        User user = new User("chenzhuo",1);
+    public void produce(User user) throws InterruptedException {
+       /* User user = new User("chenzhuo",1);*/
         basket.put(user);
     }
 
@@ -32,7 +32,6 @@ public class PersonPut {
      * @throws InterruptedException
      */
     public User consume() throws InterruptedException {
-
         return basket.take();
     }
 

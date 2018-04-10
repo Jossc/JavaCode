@@ -23,7 +23,7 @@ public class Producer implements Runnable  {
         try {
             while (true){
                 System.err.println("生产者准备生产");
-                personPut.produce();
+                personPut.produce(user);
                 System.err.println("生产者生产完毕"+ user.getUserName());
                 Thread.sleep(300);
             }
