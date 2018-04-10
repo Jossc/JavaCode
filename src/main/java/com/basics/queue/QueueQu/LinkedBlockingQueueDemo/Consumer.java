@@ -24,7 +24,7 @@ public class Consumer implements Runnable {
             while (true) {
                 System.out.println("消费者准备消费：" );
                 System.out.println(personPut.consume());
-                System.out.println("!消费者消费完毕：" + user.getUserName());
+                System.out.println("消费者消费完毕：" + user.getUserName());
                 // 休眠1000ms
                 Thread.sleep(1000);
             }
