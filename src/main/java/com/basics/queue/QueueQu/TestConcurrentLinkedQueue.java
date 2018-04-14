@@ -52,19 +52,15 @@ public class TestConcurrentLinkedQueue {
             concurrentLinkedDeque.add(user2);
             concurrentLinkedDeque.add(user3);
         });
+
    /*     executorService.submit(()->{
-            concurrentLinkedDeque.add(user);
-            concurrentLinkedDeque.add(user1);
-            concurrentLinkedDeque.add(user2);
-            concurrentLinkedDeque.add(user3);
-        });
-        executorService.submit(()->{
-            concurrentLinkedDeque.add(user);
+            concurrentLinkedDeque.remove(user);
             concurrentLinkedDeque.add(user1);
             concurrentLinkedDeque.add(user2);
             concurrentLinkedDeque.add(user3);
         });
 */
+        System.err.println("size : " + concurrentLinkedDeque.size());
         concurrentLinkedDeque.forEach(u->
                 System.err.println("username :"
                         + u.getUserName())
