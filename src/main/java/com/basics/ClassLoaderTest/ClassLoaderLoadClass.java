@@ -10,8 +10,17 @@ import java.net.URLClassLoader;
  * @author: Jossc
  */
 public class ClassLoaderLoadClass extends URLClassLoader {
+    private  ClassLoaderManager classLoaderManager = new ClassLoaderManager();
+    public ClassLoaderLoadClass(URL[] urls, ClassLoaderManager classLoaderManager) {
+        super(urls);
+        this.classLoaderManager =classLoaderManager;
+    }
+    protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
 
-    public ClassLoaderLoadClass(URL[] urls, ClassLoader parent) {
-        super(urls, parent);
+        if(classLoaderManager.getCache().containsKey(name)){
+            return classLoaderManager.getCache().get(name);
+        }else{
+            return super.loadClass(name, resolve);
+        }
     }
 }
