@@ -16,11 +16,14 @@ import java.util.*;
  */
 public class RandomUid {
     private  static Jedis jedis = new Jedis("127.0.0.1",6379);
-    private static ThreadLocal<SimpleDateFormat> threadLocal = new ThreadLocal<SimpleDateFormat>(){
+   /* private static ThreadLocal<SimpleDateFormat> threadLocal = new ThreadLocal<SimpleDateFormat>(){
         protected synchronized SimpleDateFormat initialValue() {
             return  new SimpleDateFormat("yy-MM-dd", Locale.getDefault());
         }
-    };
+    };*/
+   private static ThreadLocal<SimpleDateFormat>
+           threadLocal = ThreadLocal.withInitial(() ->
+           new SimpleDateFormat("yy-MM-dd", Locale.getDefault()));
     static {
         jedis.set("redisCount","10000");
 
