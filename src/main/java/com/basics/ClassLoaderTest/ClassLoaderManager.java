@@ -75,6 +75,7 @@ public class ClassLoaderManager {
 
                         try {
                             Class<?> clazz = classLoader.loadClass(className);
+                            //放到内存里
                             cache.put(className, clazz);
                         } catch (Throwable t) {
                             //System.out.println(t.getLocalizedMessage());
