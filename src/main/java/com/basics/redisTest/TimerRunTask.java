@@ -2,6 +2,7 @@ package com.basics.redisTest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import redis.clients.jedis.Jedis;
 
 import java.util.TimerTask;
 
@@ -17,7 +18,9 @@ public class TimerRunTask  extends TimerTask {
     @Override
     public void run() {
         try {
-            logger.error("测试定时任务~~~~~~~~~~");
+            logger.error("测试定时任务~~~~~~~~~~ 000 ");
+            Jedis jedis = new Jedis("127.0.0.1",6379);
+            jedis.set("redisCount","1");
             System.err.println(" hello ----- word ");
         }catch (Exception e){
 
