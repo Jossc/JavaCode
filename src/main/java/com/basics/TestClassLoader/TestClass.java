@@ -1,5 +1,6 @@
 package com.basics.TestClassLoader;
 
+
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -49,16 +50,18 @@ public class TestClass {
             @Override
             public Class<?> loadClass(String name) throws ClassNotFoundException {
                 try {
-                    String file  = name.substring(name.lastIndexOf(".") + 1) +".class";
-                    System.err.println("file Path : " + file);
-                    InputStream inputStream
-                            = getClass().getResourceAsStream(file);
+                    System.err.println("name : " + name);
+                   InputStream inputStream =
+                           getClass().getResourceAsStream(name);
                     if (inputStream==null){
-                        return super.loadClass(file);
+                        return super.loadClass(name);
                     }
                     byte [] b = new byte[inputStream.available()];
                     inputStream.read(b);
-                    return defineClass(name, b, 0, b.length);
+
+                    //return  findClass(name);
+                    return defineClass(name,b,0,b.length);
+                    //return loadClass("com.basics.TestClassLoader.TestClass");
                 }catch (IOException e){
                     throw new ClassNotFoundException();
                 }
@@ -73,9 +76,9 @@ public class TestClass {
         System.err.println(object instanceof com.basics.TestClassLoader.TestClass);
 
         //自定义的类加载器本类
-        Object object2 = classLoader.
-                loadClass("com.basics.TestClassLoader.TestClass").newInstance();
+        Object object2 = classLoader.loadClass("com.basics.TestClassLoader.TestClass").newInstance();
         System.err.println(object2.getClass());
         System.err.println(object2 instanceof com.basics.TestClassLoader.TestClass);
+        System.err.println( object ==object2);
     }
 }
