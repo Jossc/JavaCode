@@ -29,7 +29,7 @@ public class ThreadLocalTest {
 
         thread.start();
         thread1.start();
-
-
     }
+
+
 }
