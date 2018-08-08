@@ -5,8 +5,13 @@ package com.basics.JavaassistTest;
  * USER : chenzhuo
  * MONTH_NAME_SHORT: 八月
  * 执行环境：64位 windows，四核，16GB 内存
- * 已填充：32379924221/40012136161 毫秒
- * 伪填充：71927104917 毫秒
+ *
+ * 1.8 :已填充：32379924221/40012136161 毫秒
+ * 1.8 :未填充：71927104917 毫秒
+ *
+ * 1.6:已填充：11225094222毫秒
+ * 1.5:未填充：32909370119毫秒
+ *
  **/
 public class FalshClineTest implements  Runnable{
 
