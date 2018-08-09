@@ -6,26 +6,17 @@ import sun.misc.Contended;
  * PACKAGENAME: com.basics.JavaassistTest
  * USER : chenzhuo
  * MONTH_NAME_SHORT: 八月
- * 执行环境：64位 windows，四核，16GB 内存
- *
- * 1.8 :已填充：32379924221/40012136161 毫秒
- * 1.8 :未填充：71927104917 毫秒
- *
- * 1.8 :添加Contended 13624380339
- *
- * 1.6:已填充：11225094222毫秒
- * 1.6:未填充：32909370119毫秒
+ * jdk1.8中添加 @ @Contended 来执行共享
  * -XX:-RestrictContended
  **/
-public class FalshClineTest implements  Runnable{
+public class FalshClineTestTwo {
 
     public static int NUM_THREADS = 4;
     public final static long ITERATIONS = 500L * 1000L * 1000L;
     private final int arrayIndex;
-    private static VolatileLong[] longs;
+    private static voli[] longs;
     public static long SUM_TIME = 0l;
-
-    public FalshClineTest(int arrayIndex) {
+    public FalshClineTestTwo(int arrayIndex) {
         this.arrayIndex = arrayIndex;
     }
     public static void main(final String[] args) throws Exception {
@@ -35,9 +26,9 @@ public class FalshClineTest implements  Runnable{
             if (args.length == 1) {
                 NUM_THREADS = Integer.parseInt(args[0]);
             }
-            longs = new VolatileLong[NUM_THREADS];
+            longs = new voli[NUM_THREADS];
             for (int i = 0; i < longs.length; i++) {
-                longs[i] = new VolatileLong();
+                longs[i] = new voli();
             }
             final long start = System.nanoTime();
             runTest();
@@ -74,9 +65,10 @@ public class FalshClineTest implements  Runnable{
      * 测试伪装共享
      */
     @Contended
-    public final static class VolatileLong {
+    public final static class voli {
         public volatile long value = 0L;
-     //   public long p1, p2, p3, p4, p5, p6;//屏蔽此行
+        public long p1, p2, p3, p4, p5, p6;//屏蔽此行
         //public volatile  long cvalue =1l;
     }
 }
+
