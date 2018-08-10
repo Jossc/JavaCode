@@ -16,7 +16,6 @@ public class LockSupportSupperOne {
     static final Unsafe unsafe;
     private volatile long state = 0;
     static {
-
         try {
             Field field = Unsafe.class.getDeclaredField("theUnsafe");
             field.setAccessible(true);
