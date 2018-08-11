@@ -2,6 +2,8 @@ package com.basics.ThreadCode;
 
 import sun.misc.Unsafe;
 import java.lang.reflect.Field;
+import java.util.concurrent.locks.LockSupport;
+
 /**
  * @ClassName ThreadObjectWait
  * @Description TODO
@@ -10,7 +12,6 @@ import java.lang.reflect.Field;
  * @Version 1.0
  *
  * 写出了智障的代码
- *
  *   public static void main(String []args){
  *         Thread thread = new Thread(()->{
  *             System.out.println("开始中断。。。。。。");
@@ -75,7 +76,6 @@ public class ThreadObjectWait {
      * #
      * # An error report file with more information is saved as:
      * # D:\whyJava\JavaCode\hs_err_pid9108.log
-     * #
      * # If you would like to submit a bug report, please visit:
      * #   http://bugreport.java.com/bugreport/crash.jsp
      * #
@@ -84,11 +84,12 @@ public class ThreadObjectWait {
     public static void main(String []args) throws InterruptedException {
       Thread thread = new Thread(()->{
           System.out.println("child thread begin park!");
-          park();
+          LockSupport.park();
           System.out.println("child thread unpark!");
       });
+        /*LockSupport.park(thread);*/
         thread.start();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         System.out.println("main thread begin unpark!");
         unPark(thread);
 
@@ -114,5 +115,6 @@ public class ThreadObjectWait {
         park(100000L);
         System.out.println("开始授权认证---------:");
         unsafe.unpark(Thread.currentThread());
+        LockSupport.park();
     }
 }
