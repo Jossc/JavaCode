@@ -14,7 +14,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class CopyOnWriteArrayListTest {
     private static volatile CopyOnWriteArrayList<String>
             arrayList = new CopyOnWriteArrayList<>();
-    public static void main(String []args) throws InterruptedException {
+
+    public static void main(String[] args) throws InterruptedException {
         CopyOnWriteArrayListTest copyOnWriteArrayListTest = new CopyOnWriteArrayListTest();
         copyOnWriteArrayListTest.testList();
     }
@@ -25,18 +26,20 @@ public class CopyOnWriteArrayListTest {
         arrayList.add("welcome");
         arrayList.add("to");
         arrayList.add("hangzhou");
-        Thread threadOne = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                //修改list中下标为1的元素为baba
-                arrayList.set(1, "baba");
-                //删除元素
-                arrayList.remove(2);
-                arrayList.remove(3);
-
-            }
+        Thread threadOne = new Thread(() -> {
+            //修改list中下标为1的元素为baba
+            arrayList.set(1, "baba");
+            //删除元素
+            arrayList.remove(2);
+            arrayList.remove(3);
         });
         /**
+         *  threadOne.start();
+         *  //等在子线程执行完毕
+         *  threadOne.join();
+         *  while (itr.hasNext()) {
+         *    System.out.println(itr.next());
+         *  }
          * 弱一致性
          * 优先执行遍历，然后才能修改
          */
