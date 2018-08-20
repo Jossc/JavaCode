@@ -14,7 +14,6 @@ import java.lang.reflect.Field;
  **/
 public class ParkUntilTest {
     static Unsafe unsafe;
-
     /**
      * 获取unsafe实例
      */
@@ -29,5 +28,16 @@ public class ParkUntilTest {
             e.printStackTrace();
         }
     }
+
+    public  static  void main(String []args){
+       // unsafe.putIntVolatile(,);
+        unsafe.putIntVolatile(1,1,1);
+        int intVolatile = unsafe.getIntVolatile(1, 100);
+        System.out.println("intVolatile: "+ intVolatile);
+    }
+    public void parkThread(){
+
+    }
+
 }
 
