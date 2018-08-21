@@ -2,6 +2,8 @@ package com.basics.UnsafeTest;
 
 import sun.misc.Unsafe;
 
+import java.lang.reflect.Field;
+
 /**
  * @PACKAGE_NAME: com.basics.UnsafeTest
  * @PROJECT_NAME: JavaCode
@@ -12,16 +14,21 @@ import sun.misc.Unsafe;
  * 所以出现java.lang.SecurityException: Unsafe异常
  */
 public class UnsafeTestOne {
-    private static Unsafe unsafe = Unsafe.getUnsafe();
+    private static Unsafe unsafe;
     private static  long stateOffset;
     private static volatile  long state = 0 ;
     static {
         try {
-            stateOffset = unsafe.objectFieldOffset(UnsafeTestOne.class
-            .getDeclaredField("state"));
+            Field field = Unsafe.class.getDeclaredField("theUnsafe");
+            field.setAccessible(true);
+             unsafe = (Unsafe) field.get(null);
+             stateOffset = unsafe.
+                     objectFieldOffset(UnsafeTestOne.class.getDeclaredField("state"));
         } catch (NoSuchFieldException e) {
             System.out.println(e.getLocalizedMessage());
             throw new Error(e);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
         }
     }
     public static void main(String []args ){

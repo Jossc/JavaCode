@@ -22,7 +22,7 @@ public class UnsafeTestTwo {
              Field field = Unsafe.class.getDeclaredField("theUnsafe");
              field.setAccessible(true);
              unsafe = (Unsafe) field.get(null);
-            stateOffset =
+             stateOffset =
                     unsafe.objectFieldOffset(UnsafeTestTwo.class.
                             getDeclaredField("state"));
             System.out.println("stateOffset: " +stateOffset);
