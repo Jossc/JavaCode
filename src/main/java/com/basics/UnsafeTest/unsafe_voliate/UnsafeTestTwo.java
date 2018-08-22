@@ -41,7 +41,15 @@ public class UnsafeTestTwo {
         int unsafeInt = unsafe.getInt(UnsafeTestTwo.class, anLong);
         System.out.println("anInt: " + unsafeInt);
         System.out.println("anLong : " + anLong);
-        unsafeTestTwo.testSys();
+       /* unsafeTestTwo.testSys();*/
+        try {
+            UnsafeTestTwo o = (UnsafeTestTwo) unsafe.allocateInstance(UnsafeTestTwo.class);
+            //2055281021  ---   1554547125
+            System.out.println("true or false :" +o.hashCode() + " hash" + unsafeTestTwo.hashCode());
+            /*   o.testSys();*/
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        }
     }
 
     public  void testSys() {
