@@ -21,13 +21,7 @@ public class CopyOnWriteArrayListTest {
     }
 
     public void testList() throws InterruptedException {
-        arrayList.add("hello");
-        arrayList.add("alibaba");
-        arrayList.add("welcome");
-        arrayList.add("to");
-        arrayList.add("hangzhou");
         Thread threadOne = new Thread(() -> {
-            //修改list中下标为1的元素为baba
             arrayList.set(1, "baba");
             //删除元素
             arrayList.remove(2);
@@ -37,6 +31,7 @@ public class CopyOnWriteArrayListTest {
          *  threadOne.start();
          *  //等在子线程执行完毕
          *  threadOne.join();
+         *  Iterator<String> itr = arrayList.iterator();
          *  while (itr.hasNext()) {
          *    System.out.println(itr.next());
          *  }
@@ -44,13 +39,14 @@ public class CopyOnWriteArrayListTest {
          * 优先执行遍历，然后才能修改
          */
         Iterator<String> itr = arrayList.iterator();
-        //启动线程
         threadOne.start();
-        //等在子线程执行完毕
         threadOne.join();
         while (itr.hasNext()) {
             System.out.println(itr.next());
-        }
+        }  //启动线程
+
     }
+
+
 
 }
