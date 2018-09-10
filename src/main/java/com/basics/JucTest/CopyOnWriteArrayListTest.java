@@ -14,12 +14,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class CopyOnWriteArrayListTest {
     private static volatile CopyOnWriteArrayList<String>
             arrayList = new CopyOnWriteArrayList<>();
-
     public static void main(String[] args) throws InterruptedException {
         CopyOnWriteArrayListTest copyOnWriteArrayListTest = new CopyOnWriteArrayListTest();
         copyOnWriteArrayListTest.testList();
     }
-
     public void testList() throws InterruptedException {
         Thread threadOne = new Thread(() -> {
             arrayList.set(1, "baba");
@@ -27,6 +25,12 @@ public class CopyOnWriteArrayListTest {
             arrayList.remove(2);
             arrayList.remove(3);
         });
+
+
+
+
+
+
         /**
          *  threadOne.start();
          *  //等在子线程执行完毕
