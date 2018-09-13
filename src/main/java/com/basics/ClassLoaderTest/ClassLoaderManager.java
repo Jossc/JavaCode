@@ -16,7 +16,7 @@ import java.util.jar.JarFile;
  * @PROJECT_NAME: JavaCode
  * @Date: 2018/4/20
  * @author: Jossc
- * 不同模块加载 Jar 里面的类到内存 map
+ * 不同模块加载 Jar 面的类到内存 map里
  */
 public class ClassLoaderManager {
     private ExecutorService executor = Executors.newFixedThreadPool(8);

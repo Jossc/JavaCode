@@ -53,13 +53,13 @@ public class UnsafeTestTwo {
     }
 
     public  void testSys() {
-    /*    System. out. println("array scale "+unsafe .arrayIndexScale(ArrayList.class));*/
-        System. out . println("array scale "+unsafe. arrayIndexScale(UnsafeTestTwo[].class));
-        System. out . println("array scale "+unsafe. arrayIndexScale(Long.class));
-        System. out . println("array scale "+unsafe . arrayIndexScale(Boolean[].class));
-    /*    System. out . println("array i scale "+unsafe. arrayIndexScale(int[]. class));*/
-        System. out . println("array scale"+unsafe . arrayIndexScale(Integer.class));
-        System. out . println("array scale "+unsafe . arrayIndexScale(Byte.class));
+        System. out. println("array scale "+unsafe .arrayBaseOffset(ArrayList.class));
+        System. out . println("array scale "+unsafe. arrayBaseOffset (UnsafeTestTwo[].class));
+        System. out . println("array scale "+unsafe. arrayBaseOffset (Long.class));
+        System. out . println("array scale "+unsafe . arrayBaseOffset (Boolean[].class));
+        System. out . println("array i scale "+unsafe. arrayBaseOffset (int[]. class));
+        System. out . println("array scale"+unsafe . arrayBaseOffset (Integer.class));
+        System. out . println("array scale "+unsafe . arrayBaseOffset (Byte.class));
     }
 }
 

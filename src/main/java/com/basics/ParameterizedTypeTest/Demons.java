@@ -10,7 +10,7 @@ import java.lang.reflect.Type;
  **/
 public class Demons {
     public static void main(String []args){
-        classTest();
+     //   classTest();
         interfaceTest();
     }
     public static void classTest(){
