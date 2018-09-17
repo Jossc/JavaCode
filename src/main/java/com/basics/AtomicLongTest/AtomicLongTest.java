@@ -30,7 +30,7 @@ public class AtomicLongTest {
             int size = two.length;
             for(int i =0;  i<size;i++){
                 if(two[i].intValue() == 0){
-                    atomicLong.incrementAndGet();
+                    atomicLong.set(1);
                 }
             }
         });
