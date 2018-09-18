@@ -12,7 +12,9 @@ import java.util.concurrent.locks.ReentrantLock;
  * Condition
  * See {@link AbstractQueuedLongSynchronizer}
  * {@link Condition}
- *
+ * 这里和 synchronized的区别
+ * synchronized的唤醒的线程不一定是消费者还是生产
+ * 但是使用了 Condition 就能明确的指定唤醒那个线程
  * 生产和消费
  **/
 public class ReenterCondition {
