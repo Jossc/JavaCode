@@ -11,17 +11,27 @@ import java.util.concurrent.Semaphore;
  * USER: Clement
  * SemaphoreTest
  * see {@link Semaphore}
+ *  final int nonfairTryAcquireShared(int acquires) {
+ *             for (;;) {
+ *                 int available = getState();
+ *                 int remaining = available - acquires;
+ *                 if (remaining < 0 ||
+ *                     compareAndSetState(available, remaining))
+ *                     return remaining;
+ *             }
+ *         }
+ *
  **/
 public class SemaphoreTest {
-    public static void main(String[] args) {
-        ExecutorService executorService
+    public static void main(String[] args) throws InterruptedException {
+       /* ExecutorService executorService
                  = Executors.newCachedThreadPool();
         //设置信号量同时执行的线程数是5
         final Semaphore semp = new Semaphore(5);
         // 模拟20个客户端访问
         for (int index = 0; index < 20; index++) {
             final int cout = index;
-            Runnable run = () -> {
+           Runnable run = () -> {
                 try {
                     semp.acquire();
                     System.out.println("Access: " + cout);
@@ -37,6 +47,14 @@ public class SemaphoreTest {
             };
             executorService.execute(run);
         }
-        executorService.shutdown();
+        executorService.shutdown();*/
+        final Semaphore semp = new Semaphore(5);
+        semp.acquire();
+    }
+    public void test(){
+
+      /*  ExecutorService executorService
+                = Executors.newCachedThreadPool();*/
+
     }
 }
