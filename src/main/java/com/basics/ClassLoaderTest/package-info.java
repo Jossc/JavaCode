@@ -27,7 +27,6 @@
  *             } else {
  *                 var1 = new File[0];
  *             }
- *
  *             return var1;
  *         }
  *

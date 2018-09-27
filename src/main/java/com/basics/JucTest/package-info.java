@@ -1,4 +1,17 @@
 /**
- *  juc 屠龙开始。8.13
+ * juc核心
+ *
+ * cas算法：
+ *
+ *
+ *
+ *
+ *
+ * asq队列:
+ *
+ *
+ *
+ *
+ *
  */
 package com.basics.JucTest;
