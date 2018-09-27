@@ -42,5 +42,44 @@
  *                     return new Launcher.AppClassLoader(var1x, var0);
  *                 }
  *             });
+ * {@link java.lang.ClassLoader}
+ *  ClassLoader的核心方法：loadClass
+ *  protected Class<?> loadClass(String name, boolean resolve)
+ *         throws ClassNotFoundException
+ *     {
+ *          防止多线程竞争
+ *         synchronized (getClassLoadingLock(name)) {
+ *              先去内存中寻找，如果寻找到了 就直接加载
+ *             Class<?> c = findLoadedClass(name);
+ *             if (c == null) {
+ *                 long t0 = System.nanoTime();
+ *                 try {
+ *                      这里如果找不到 并且父加载器不为空的话，
+ *                      就托付给父加载器加载
+ *                     if (parent != null) {
+ *                         c = parent.loadClass(name, false);
+ *                     } else {
+ *                          如果没有父加载器哦，就直接给BootstrapClass加载
+ *                         c = findBootstrapClassOrNull(name);
+ *                     }
+ *                 } catch (ClassNotFoundException e) {
+ *                 }
+ *
+ *                  如果上边的都没有找到的话，那么就就执行自定义的加载器去找。
+ *                 if (c == null) {
+ *                     long t1 = System.nanoTime();
+ *                     c = findClass(name);
+ *                     sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
+ *                     sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
+ *                     sun.misc.PerfCounter.getFindClasses().increment();
+ *                 }
+ *             }
+ *             if (resolve) {
+ *                 是否在加载的时候解析
+ *                 resolveClass(c);
+ *             }
+ *             return c;
+ *         }
+ *     }
  */
 package com.basics.ClassLoaderTest;
