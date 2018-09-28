@@ -26,7 +26,8 @@
  *             createMap(t, value);
  *     }
  *  ThreadLocal的ThreadLocalMap 使用了弱引用, 所以使用完成以后一定要remove
- *  弱引用jvm不会主动的去gc,当Thread 执行完毕以后，Thread工作内存中可能还存有ThreadLocal的值。
+ *  弱引用jvm不会主动的去gc,当Thread 执行完毕以后，
+ *  Thread工作内存中可能还存有ThreadLocal的值。
  *  所以会出现OOM的情况。
  *  证明:{@link java.lang.ThreadLocal.ThreadLocalMap.Entry}
  *  Entry 继承了 WeakReference
