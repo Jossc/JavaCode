@@ -18,8 +18,10 @@ public class RunnableTest {
                 = Executors.newFixedThreadPool(10);
         for(int i= 0;i<11;i++){
             Future<?> submit = executorService.submit(() -> {
-               FinalTest.wirte();
-               FinalTest.read();
+           /*    FinalTest.wirte();
+               FinalTest.read();*/
+                FinalTestForReference.wirte();
+                FinalTestForReference.read();
             });
         }
 

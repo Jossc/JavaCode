@@ -1,7 +1,8 @@
 /**
  * final 以不变应万变
  * final 语意：
- * final 在读写之前:会添加：store_store 指令(cpu指令与java相关)
+ * final 写之前:会添加：store_store 指令(cpu指令与java相关)
+ * 读会添加load_laod指令
  *  load_load: 相当pull 把数据拉过来
  *  load_store: 遇到读操作时，他就会先检测读操作之后的任何写操作
  *  store_load: 遇到写的操作时，他就会先检测读操作之后的任何写操作
