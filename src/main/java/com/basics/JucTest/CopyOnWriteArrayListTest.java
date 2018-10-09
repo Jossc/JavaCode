@@ -10,6 +10,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * @Date 2018/8/13 17:12
  * @Version 1.0
  * CopyOnWriteArrayList 测试
+ * 弱一致性,1写N读
  **/
 public class CopyOnWriteArrayListTest {
     private static volatile CopyOnWriteArrayList<String>
@@ -20,17 +21,13 @@ public class CopyOnWriteArrayListTest {
     }
     public void testList() throws InterruptedException {
         Thread threadOne = new Thread(() -> {
-            arrayList.set(1, "baba");
+            arrayList.set(1, "come on");
+            arrayList.set(2, "show code");
+            arrayList.set(3, "the one");
             //删除元素
             arrayList.remove(2);
             arrayList.remove(3);
         });
-
-
-
-
-
-
         /**
          *  threadOne.start();
          *  //等在子线程执行完毕
@@ -47,7 +44,7 @@ public class CopyOnWriteArrayListTest {
         threadOne.join();
         while (itr.hasNext()) {
             System.out.println(itr.next());
-        }  //启动线程
+        }
 
     }
 
