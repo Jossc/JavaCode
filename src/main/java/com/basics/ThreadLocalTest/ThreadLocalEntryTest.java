@@ -7,7 +7,6 @@ import java.lang.ref.WeakReference;
  * USER : chenzhuo
  * MONTH_NAME_SHORT: 七月
  * WeakReference 弱引用
- *
  * ReferenceQueue :引用队列
  *
  **/
@@ -17,7 +16,6 @@ public class ThreadLocalEntryTest  extends WeakReference<ThreadLocal<?>> {
         System.out.println("value : "+referent.get());
         System.out.println("key : " +  " rua");
     }
-
     public static void main(String []args){
 
     }

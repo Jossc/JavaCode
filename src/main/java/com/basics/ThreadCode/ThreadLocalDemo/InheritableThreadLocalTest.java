@@ -20,6 +20,7 @@ public class InheritableThreadLocalTest {
             System.out.println("thread :" +
                     threadLocal.get());
         });
+       /* threadLocal.set();*/
         thread.start();
         System.out.println("main:" + threadLocal.get());
     }
