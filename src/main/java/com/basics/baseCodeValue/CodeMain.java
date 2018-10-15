@@ -1,7 +1,4 @@
 package com.basics.baseCodeValue;
-
-import java.util.Random;
-
 /**
  * @ClassName CodeMain
  * @Description TODO

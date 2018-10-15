@@ -12,7 +12,7 @@ package com.basics.JucTest.Final;
  **/
 public class FinalTest {
     //普通变量
-    int i ;
+    public int i ;
     //final 变量
     final int j;
     static  FinalTest finalTest;
@@ -21,6 +21,7 @@ public class FinalTest {
       i = 10;
       j = 15;
     }
+
     public static void wirte(){
         finalTest = new FinalTest();
     }

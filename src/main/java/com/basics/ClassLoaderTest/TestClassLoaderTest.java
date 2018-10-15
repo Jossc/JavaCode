@@ -9,7 +9,6 @@ public class TestClassLoaderTest {
     public static void main(String []args){
         //loader : sun.misc.Launcher$AppClassLoader
         ClassLoader loader = ClassLoader.getSystemClassLoader();
-        System.err.println("loader : " +
-                loader.getClass().getName());
+        System.err.println("loader : " + loader.getClass().getName());
     }
 }
