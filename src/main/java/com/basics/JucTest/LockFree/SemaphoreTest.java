@@ -38,6 +38,7 @@ public class SemaphoreTest {
                     Thread.sleep(1000);
                     //队里中有15个节点在等待 一次执行5个
                     System.out.println("getQueueLength: " +semp.getQueueLength());
+                    System.out.println(String.format("[Thread-%s]任务id --- %s",Thread.currentThread().getId(),cout));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }finally {
