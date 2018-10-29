@@ -1,8 +1,6 @@
 package com.basics.redisTest;
 
-import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisSentinelPool;
 
 import java.text.SimpleDateFormat;
 import java.util.*;

@@ -13,7 +13,7 @@ import java.util.concurrent.CountDownLatch;
  * countDownLatch.countDown()执行的时候减1
  * releases 传入的count值,
  * protected boolean tryReleaseShared(int releases) {
- *             // Decrement count; signal when transition to zero
+ *             // Decrement basicsThread; signal when transition to zero
  *             for (;;) {
  *                  //自旋获取state的值,就是new CountDownLatch(3)
  *                  //传入的值, 如果=0 直接返回false,不是的话就减1

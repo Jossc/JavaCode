@@ -40,7 +40,7 @@ public class AtomicLongTest {
         oneThread.join();
         twoThread.join();
 
-        System.err.println("count : " + atomicLong.get());
+        System.err.println("basicsThread : " + atomicLong.get());
 
     }
 }

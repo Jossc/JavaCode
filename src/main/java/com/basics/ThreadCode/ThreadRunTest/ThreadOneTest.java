@@ -1,12 +1,14 @@
 package com.basics.ThreadCode.ThreadRunTest;
 
+import org.junit.runner.notification.RunListener;
+
 /**
  * PACKAGENAME: com.basics.ThreadCode.ThreadRunTest
  * USER : chenzhuo
  * MONTH_NAME_SHORT: 七月
  *
  * @simg Synchronized
- **/
+ **/ 
 public class ThreadOneTest {
     public static void main(String []args){
         ThreadOneTest threadOneTest = new ThreadOneTest();

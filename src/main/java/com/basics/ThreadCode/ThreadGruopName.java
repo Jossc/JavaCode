@@ -23,7 +23,7 @@ public class ThreadGruopName implements Runnable {
         Thread thread1 = new Thread(threadGroup,new ThreadGruopName(),"t2");
         thread.start();
         thread1.start();
-        System.err.println("count :" + threadGroup.activeCount());
+        System.err.println("basicsThread :" + threadGroup.activeCount());
         threadGroup.list();
     }
 }

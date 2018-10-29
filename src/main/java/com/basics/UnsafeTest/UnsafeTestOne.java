@@ -2,7 +2,6 @@ package com.basics.UnsafeTest;
 
 import sun.misc.Unsafe;
 
-import java.lang.reflect.Field;
 
 /**
  * @PACKAGE_NAME: com.basics.UnsafeTest
@@ -18,7 +17,7 @@ public class UnsafeTestOne {
     private static  long stateOffset;
     private static volatile  long state = 0 ;
     static {
-        try {
+       /* try {
             Field field = Unsafe.class.getDeclaredField("theUnsafe");
             field.setAccessible(true);
              unsafe = (Unsafe) field.get(null);
@@ -29,12 +28,13 @@ public class UnsafeTestOne {
             throw new Error(e);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
-        }
+        }*/
     }
     public static void main(String []args ){
         UnsafeTestOne testOne = new UnsafeTestOne();
         Boolean b = unsafe.compareAndSwapInt(testOne,stateOffset,0,1);
         System.out.println(" sucess : "+ b);
+
     }
 
 }

@@ -34,7 +34,7 @@ public class ExtClassLoaderTest {
             StringTokenizer stringTokenizer
                     = new StringTokenizer(s,File.pathSeparator);
             int count = stringTokenizer.countTokens();
-            System.out.println("count :" + count);
+            System.out.println("basicsThread :" + count);
             dirs = new File[count];
             for (int i = 0; i < count; i++) {
                 dirs[i] = new File(stringTokenizer.nextToken());
