@@ -1,4 +1,4 @@
-package com.sun.proxy;
+package com.sun;
 
 /**
  * @ClassName Memony

@@ -1,4 +1,4 @@
-package com.sun.proxy;
+package com.sun;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

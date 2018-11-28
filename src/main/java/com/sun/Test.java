@@ -1,4 +1,4 @@
-package com.sun.proxy;
+package com.sun;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.sun.proxy;
+package com.sun;
 
 import org.apache.commons.codec.binary.Base64;
 import java.io.UnsupportedEncodingException;
