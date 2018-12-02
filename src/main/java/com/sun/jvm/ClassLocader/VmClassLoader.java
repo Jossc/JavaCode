@@ -2,6 +2,8 @@ package com.sun.jvm.ClassLocader;
 
 import com.basics.ClassLoaderTest.ClassLoaderLoadClass;
 
+import java.util.concurrent.FutureTask;
+
 /**
  * @ClassName VmClassLoader
  * @Despacito TODO 学习jvm
@@ -28,6 +30,8 @@ public class VmClassLoader {
     public static void main(String[] args) {
       /*  ClassLoader classLoader = ClassLoader.getSystemClassLoader();
         classLoader.loadClass();*/
+        Class clazz ;
+
         Singer singer = Singer.getInstance();
         System.out.println("count1:" + singer.count1);
         System.out.println("count2:" + singer.count2);

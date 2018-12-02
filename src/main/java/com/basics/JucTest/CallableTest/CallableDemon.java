@@ -20,5 +20,4 @@ public class CallableDemon implements Callable<Integer> {
         return sum;
     }
 
-
 }
