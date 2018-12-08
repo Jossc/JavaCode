@@ -1,5 +1,7 @@
 package com.jdk8.lmb;
 
+import com.jdk8.lmb.lam_interface.TestInterFace;
+import com.sun.org.apache.xpath.internal.operations.String;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,7 +17,7 @@ public class lmb {
     private static Logger logger =
             LoggerFactory.getLogger(lmb.class);
     public static void main(String[] args) {
-        JFrame frame = new JFrame("lm");
+      /*  JFrame frame = new JFrame("lm");
         JButton jButton = new JButton("s");
         jButton.addActionListener(event->
             System.out.println("e" + event.getModifiers())
@@ -23,6 +25,8 @@ public class lmb {
         frame.add(jButton);
         frame.pack();
         frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);*/
+        String string = new String();
+
     }
 }
