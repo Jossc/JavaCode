@@ -8,14 +8,15 @@ package com.sun.jvm.Jvm;
  * -Xmx20m -Xms5m -XX:+PrintCommandLineFlags -XX:+PrintGCDetails -XX:+UseSerialGC
  **/
 public class SimpleHeadpAlloc {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         getOut();
-        byte[] b = new byte[1*1024*1024];
+        byte[] b = new byte[1024 * 1024];
         System.out.println("分配了1m空间给数组");
         getOut();
         b = new byte[4*1024*1024];
         System.out.println("分配了4m空间给数组");
         getOut();
+        Thread.sleep(30000);
     }
 
     private static void getOut() {
