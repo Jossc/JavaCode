@@ -1,5 +1,8 @@
 package com.sun.jvm.Jvm;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @ClassName SimpleHeadpAlloc
  * @Despacito TODO
@@ -8,6 +11,8 @@ package com.sun.jvm.Jvm;
  * -Xmx20m -Xms5m -XX:+PrintCommandLineFlags -XX:+PrintGCDetails -XX:+UseSerialGC
  **/
 public class SimpleHeadpAlloc {
+  /*  public static final Logger logger = LoggerFactory.getLogger(SimpleHeadpAlloc.class);*/
+    public final  double aDouble = 555D;
     public static void main(String[] args) throws InterruptedException {
         getOut();
         byte[] b = new byte[1024 * 1024];
