@@ -15,6 +15,16 @@ public class DaemoDemo {
                 }
             }
         }
+        public  String s;
+
+
+        public String getS() {
+            return s;
+        }
+
+        public void setS(String s) {
+            this.s = s;
+        }
     }
     public static void main(String [] args){
         Thread t = new Demo();
@@ -22,5 +32,10 @@ public class DaemoDemo {
         t.start();
         //Exception in thread "main" java.lang.IllegalThreadStateException
         //t.setDaemon(true);
+
+        Demo d = new Demo();
+        System.out.println("d.get :" + d.getS());
     }
+
+
 }

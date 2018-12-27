@@ -2,7 +2,11 @@ package com.sun.jvm.ClassLocader;
 
 import com.basics.ClassLoaderTest.ClassLoaderLoadClass;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.FutureTask;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 /**
  * @ClassName VmClassLoader
@@ -31,7 +35,25 @@ public class VmClassLoader {
       /*  ClassLoader classLoader = ClassLoader.getSystemClassLoader();
         classLoader.loadClass();*/
         Class clazz ;
+        Stream stream;
+        List<String> list = Arrays.asList("A","b","C","D");
 
+        list.forEach(String::toLowerCase);
+
+        list.forEach(l->{
+            l.toLowerCase();
+        });
+
+        list.forEach(new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                s.toLowerCase();
+            }
+        });
+
+        for(String s:list){
+            s.toLowerCase();
+        }
         Singer singer = Singer.getInstance();
         System.out.println("count1:" + singer.count1);
         System.out.println("count2:" + singer.count2);

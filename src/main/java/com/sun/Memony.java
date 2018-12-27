@@ -8,12 +8,18 @@ package com.sun;
  * @Version 1.0
  **/
 public class Memony {
-    byte b;
-    int i ;
-    boolean aBoolean;
-    long e;
-    Object object;
-    public static void main(String[] args) {
 
+    public static void main(String[] args) throws InterruptedException {
+        for (int i =0;i<128;i++){
+            if(i<70){
+                byte[] b = new byte[1*1024*1024];
+            }
+            if(i==72){
+                System.err.println("使用了 72m");
+                Thread.sleep(2000);
+            }
+            byte[]b1 = new byte[1*1024*1024];
+        }
+        System.err.println("end ---- ");
     }
 }
