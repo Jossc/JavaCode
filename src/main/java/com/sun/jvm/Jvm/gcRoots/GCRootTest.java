@@ -80,6 +80,8 @@ public class GCRootTest {
          *  Metaspace       used 3223K, capacity 4500K, committed 4864K, reserved 1056768K
          *   class space    used 349K, capacity 388K, committed 512K, reserved 1048576K
          */
+        //没有设置为null的时候,回收的时候会遍历next的所以节点,所以会很耗时间
+        //但是把next的set为null的时候 就变为不可达状态
        // next = null; help gc
         triggerGC();
     }

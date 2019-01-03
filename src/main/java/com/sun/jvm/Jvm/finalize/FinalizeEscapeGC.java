@@ -5,6 +5,8 @@ package com.sun.jvm.Jvm.finalize;
  * @Despacito TODO
  * @Author chenzhuo
  * @Version 1.0
+ *
+ *
  * Finalize导致gc失效
  * finalize 放在 finalize-Queue中 在一个低级的线程中执行
  * finalize() 只能被执行一次
