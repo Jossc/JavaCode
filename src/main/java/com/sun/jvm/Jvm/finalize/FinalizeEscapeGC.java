@@ -5,8 +5,6 @@ package com.sun.jvm.Jvm.finalize;
  * @Despacito TODO
  * @Author chenzhuo
  * @Version 1.0
- *
- *
  * Finalize导致gc失效
  * finalize 放在 finalize-Queue中 在一个低级的线程中执行
  * finalize() 只能被执行一次
@@ -34,6 +32,8 @@ package com.sun.jvm.Jvm.finalize;
  *finalize问题:
  *  finalize-Queue是由一个低级的线程去执行的,jvm不保证这个一定会执行完,
  *  因为finalize-Queue在执行的时候可能出现了死循环,会导致整个回收系统的奔溃
+ *
+ *
  *
  **/
 public class FinalizeEscapeGC {

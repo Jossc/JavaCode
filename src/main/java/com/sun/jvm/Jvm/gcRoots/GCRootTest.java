@@ -68,6 +68,8 @@ public class GCRootTest {
             Node node = new Node(i, next);
             next = node;
         }
+        next = null;
+        triggerGC();
         /**
          *  gc日志
          * [GC (Allocation Failure) [ParNew: 1064551K->847K(1198080K), 0.0038396 secs] 1064551K->847K(3962880K), 0.0039093 secs] [Times: user=0.00 sys=0.00, real=0.00 secs]
@@ -83,7 +85,7 @@ public class GCRootTest {
         //没有设置为null的时候,回收的时候会遍历next的所以节点,所以会很耗时间
         //但是把next的set为null的时候 就变为不可达状态
        // next = null; help gc
-        triggerGC();
+
     }
 
     private static void triggerGC() {
