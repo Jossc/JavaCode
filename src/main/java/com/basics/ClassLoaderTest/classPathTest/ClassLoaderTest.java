@@ -41,7 +41,6 @@ public class ClassLoaderTest  extends  ClassLoader{
      * @return
      */
     private byte[] getClassData(String className) {
-
         String path = classNameToPath(className);
         try {
             InputStream ins = new FileInputStream(path);
@@ -66,11 +65,16 @@ public class ClassLoaderTest  extends  ClassLoader{
 
     public static void main(String[] args) {
         String dir = "/Users/mac/Desktop/JavaCode/src/main/java/";
-        ClassLoaderTest classLoaderTest
-                 = new ClassLoaderTest(dir);
+        ObjectHello objectHello   = new ObjectHello();
+        ClassLoaderTest classLoaderTest = new ClassLoaderTest(dir);
         try {
             Class<?> c
                      = classLoaderTest.loadClass("com.basics.ClassLoaderTest.classPathTest.ObjectHello");
+            ObjectHello objectHello1 = (ObjectHello) c.newInstance();
+            if(objectHello1 instanceof  ObjectHello ){
+
+            }
+            System.out.println(ClassLoader.getSystemClassLoader().getParent());
             System.out.println("c :" +c.newInstance().toString());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

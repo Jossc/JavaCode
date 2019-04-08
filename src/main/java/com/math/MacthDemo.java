@@ -189,6 +189,7 @@ public class MacthDemo {
                 {25,136.5},{26,132.5},{27,130.5},
                 {28,117}
         };
+
         double[][] user12L = {{1,97},{3,83.5},{4,80},{7,87},
                 {10,87},{11,83},{12,90},
                 {13,93},{14,91.33},{16,91},
@@ -200,9 +201,17 @@ public class MacthDemo {
                 {17,138},{18,134},{20,132},{21,135},
                 {22,131.75},{23,128},{24,142.5},{30,141}};
 
-
+        double[][] user13={{1,125.25},{2,116.75},{3,120.33},{4,121.25},
+                {5,116.66},{6,102.8},
+                {7,122.88},{8,127},{9,127.71},
+                {10,137.66},{11,127.125},{12,135},{13,117},
+                {14,135.16},{15,153.5},{16,145},{17,152},
+                {18,157},{19,143},
+                {20,136.5},{21,132.5},{22,130.5},
+                {23,117}
+        };
         SimpleRegression regression = new SimpleRegression();
-        regression.addData(user11H);
+        regression.addData(user4H);
         System.out.println("斜率是：" + regression.getSlope());
         System.out.println("斜率标准差是：" + regression.getSlopeStdErr());
         System.out.println("截距是：" + regression.getIntercept());

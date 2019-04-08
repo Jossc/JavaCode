@@ -7,4 +7,8 @@ package com.thought.extend;
  * @Version 1.0
  **/
 public class Bird {
+
+    public void move(){
+
+    }
 }

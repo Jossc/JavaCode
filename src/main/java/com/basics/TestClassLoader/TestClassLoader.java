@@ -23,7 +23,7 @@ public class TestClassLoader {
        System.err.println("emm :" + object.getClass().getName());
     }
     public static class MyClassLoader  extends ClassLoader{
-        public Class<?> loadClassMy(){
+        private Class<?> loadClassMy(){
             InputStream inputStream
                     = TestClassLoader.class.getResourceAsStream("TestClassLoader.class");
 

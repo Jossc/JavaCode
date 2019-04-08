@@ -1,8 +1,8 @@
 package com.basics.ThreadCode;
 
 /**
- * volatile 不安全实例
- * volatile 只保证了可见行（内存刷新）
+ * volatileLearn 不安全实例
+ * volatileLearn 只保证了可见行（内存刷新）
  * 并不保证线程安全（原子性）
  */
 public class AccountingVlog implements  Runnable {

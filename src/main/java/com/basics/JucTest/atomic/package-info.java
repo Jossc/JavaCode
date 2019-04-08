@@ -5,6 +5,6 @@
  *
  * 原子类
  *
- * cas + volatile
+ * cas + volatileLearn
  **/
 package com.basics.JucTest.atomic;

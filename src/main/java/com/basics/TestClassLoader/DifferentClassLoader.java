@@ -6,5 +6,6 @@ package com.basics.TestClassLoader;
  * @Author chenzhuo
  * @Version 1.0
  **/
-public class DifferentClassLoader {
+public class DifferentClassLoader extends ClassLoader {
+
 }

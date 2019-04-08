@@ -8,7 +8,9 @@ package com.basics.enumTest;
  **/
 public class   EmuTest {
     public static void main(String[] args) {
-        String s = Test.emmm.valaue;
+     String s =   EnumTest.ADULT_SBP_FIRST_LEVEL.getValue();
+     
+     System.out.println(s);
     }
     enum  Test{
         emmm("这是一个枚举类");

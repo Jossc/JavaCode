@@ -6,5 +6,14 @@ package com.thought.abstraction;
  * @Author chenzhuo
  * @Version 1.0
  **/
-public class OneAbstracStatus {
+public class OneAbstracStatus extends AbstractStatus {
+    @Override
+    public String runString() {
+        return "cc";
+    }
+
+    @Override
+    public int changeInt() {
+        return 1;
+    }
 }

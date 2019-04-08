@@ -18,6 +18,7 @@ public class ExtClassLoaderTest {
         ExtClassLoaderTest extClassLoaderTest
                  = new ExtClassLoaderTest();
         File[] test = extClassLoaderTest.test();
+     ClassLoader classLoader;
 
        List<File> list =  Arrays.asList(test);
         list.forEach(file -> {

@@ -7,4 +7,6 @@ package com.jdk8.lmb.model;
  * @Version 1.0
  **/
 public class Point {
+
+
 }

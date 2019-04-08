@@ -7,4 +7,13 @@ package com.thought.extend;
  * @Version 1.0
  **/
 public class BirdController {
+    public void run(Bird bird){
+        bird.move();
+    }
+
+    public static void main(String[] args) {
+        BirdController birdController = new BirdController();
+        Bird bird = new Bird();
+        birdController.run(bird);
+    }
 }
