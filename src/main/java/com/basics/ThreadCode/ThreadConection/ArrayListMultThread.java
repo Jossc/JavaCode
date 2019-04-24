@@ -2,6 +2,9 @@ package com.basics.ThreadCode.ThreadConection;
 
 import java.util.ArrayList;
 
+/**
+ * @author demons
+ */
 public class ArrayListMultThread {
     public static ArrayList<Integer> list = new ArrayList<>();
 
