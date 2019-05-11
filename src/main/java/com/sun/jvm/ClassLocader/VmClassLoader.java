@@ -1,10 +1,7 @@
 package com.sun.jvm.ClassLocader;
 
-import com.basics.ClassLoaderTest.ClassLoaderLoadClass;
-
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.FutureTask;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 

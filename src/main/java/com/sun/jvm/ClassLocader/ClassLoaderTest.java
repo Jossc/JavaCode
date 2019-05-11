@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * @ClassName ClassLoaderTest
+ * @ClassName classloadertest
  * @Despacito TODO
  * @Author chenzhuo
  * @Version 1.0
