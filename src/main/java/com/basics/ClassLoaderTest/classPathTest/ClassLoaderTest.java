@@ -21,7 +21,7 @@ public class ClassLoaderTest  extends  ClassLoader{
      * @throws ClassNotFoundException
      */
     @Override
-    protected Class<?> findClass(String name) throws ClassNotFoundException {
+    public Class<?> findClass(String name) throws ClassNotFoundException {
         byte[] classData = getClassData(name);
         if(null == classData){
             throw  new ClassNotFoundException();

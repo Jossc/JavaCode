@@ -7,6 +7,8 @@ package com.basics.Lock.Synchronized;
  *
  **/
 public class SynchronizedTest {
+
+    private static Object object = new Object();
     /**
      * public static void main(java.lang.String[]);
      *     descriptor: ([Ljava/lang/String;)V
@@ -35,6 +37,14 @@ public class SynchronizedTest {
     public static void main(String[] args) {
         synchronized (SynchronizedTest.class){
             new SynchronizedTest().m();
+        }
+        SynchronizedTest synchronizedTest = new SynchronizedTest();
+        synchronizedTest.m();
+    }
+
+    private void test(){
+        synchronized (object){
+            System.out.println("hello ");
         }
     }
 

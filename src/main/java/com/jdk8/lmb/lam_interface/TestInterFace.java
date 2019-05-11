@@ -12,7 +12,7 @@ package com.jdk8.lmb.lam_interface;
  *  <em>not</em> count toward the interface's abstract method count
  **/
 @FunctionalInterface
-public interface TestInterFace {
+public interface  TestInterFace {
     void test(String stirng );
 
     /*void testOne();*/

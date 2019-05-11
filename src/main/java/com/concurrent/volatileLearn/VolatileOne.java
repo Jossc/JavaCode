@@ -21,14 +21,14 @@ public class VolatileOne {
     }
 
     private void showDown() {
-        SHOW_DOWN_STATUS = true;
+        SHOW_DOWN_STATUS = false;
     }
 
     /**
      这里在循环外调用showDown
      */
     public void doWorker() {
-        while (!SHOW_DOWN_STATUS) {
+        while (SHOW_DOWN_STATUS) {
             runTest();
         }
     }
