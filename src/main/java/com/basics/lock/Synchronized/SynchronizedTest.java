@@ -1,7 +1,7 @@
-package com.basics.Lock.Synchronized;
+package com.basics.lock.Synchronized;
 
 /**
- * PACKAGE_NAME: com.basics.Lock.Synchronized
+ * PACKAGE_NAME: com.basics.lock.Synchronized
  * MONTH_NAME_SHORT: 十月
  * USER: Clement
  *
@@ -13,11 +13,11 @@ public class SynchronizedTest {
      *     flags: ACC_PUBLIC, ACC_STATIC
      *     Code:
      *       stack=2, locals=3, args_size=1
-     *          0: ldc           #2                  // class com/basics/Lock/Synchronized/SynchronizedTest
+     *          0: ldc           #2                  // class com/basics/lock/Synchronized/SynchronizedTest
      *          2: dup
      *          3: astore_1
      *          4: monitorenter   //开始加锁
-     *          5: new           #2                  // class com/basics/Lock/Synchronized/SynchronizedTest
+     *          5: new           #2                  // class com/basics/lock/Synchronized/SynchronizedTest
      *          8: dup
      *          9: invokespecial #3                  // Method "<init>":()V
      *         12: invokevirtual #4                  // Method m:()V

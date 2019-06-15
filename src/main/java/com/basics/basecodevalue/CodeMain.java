@@ -22,8 +22,9 @@ public class CodeMain {
     public static String HloveyRC4(String aInput,String aKey){
         int[] iS = new int[256];
         byte[] iK = new byte[256];
-        for (int i=0;i<256;i++)
+        for (int i=0;i<256;i++) {
             iS[i]=i;
+        }
         int j = 1;
         for (short i= 0;i<256;i++){
             iK[i]=(byte)aKey.charAt((i % aKey.length()));

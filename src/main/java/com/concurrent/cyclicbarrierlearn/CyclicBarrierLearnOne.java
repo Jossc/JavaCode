@@ -1,4 +1,4 @@
-package com.concurrent.cyclicBarrierLearn;
+package com.concurrent.cyclicbarrierlearn;
 
 import java.util.concurrent.CyclicBarrier;
 

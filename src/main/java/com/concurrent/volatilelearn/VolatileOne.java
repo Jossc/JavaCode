@@ -1,4 +1,4 @@
-package com.concurrent.volatileLearn;
+package com.concurrent.volatilelearn;
 
 /**
  * @ClassName VolatileOne
@@ -10,25 +10,20 @@ public class VolatileOne {
     /**
      * 状态标志并不依赖于程序内任何其他状态，所以这里非常适合使用 volatile
      */
-    private volatile boolean SHOW_DOWN_STATUS;
+    private volatile boolean showDownStatus;
 
     public static void main(String[] args) {
-        int i =100;
-        int b = 200;
-        /*if((i>b||(i&&b))){
-
-        }*/
     }
 
     private void showDown() {
-        SHOW_DOWN_STATUS = true;
+        showDownStatus = true;
     }
 
     /**
      这里在循环外调用showDown
      */
     public void doWorker() {
-        while (!SHOW_DOWN_STATUS) {
+        while (!showDownStatus) {
             runTest();
         }
     }
