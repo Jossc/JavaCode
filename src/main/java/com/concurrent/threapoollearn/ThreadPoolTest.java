@@ -1,4 +1,4 @@
-package com.concurrent.threaPoolLearn;
+package com.concurrent.threapoollearn;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
