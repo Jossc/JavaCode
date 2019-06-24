@@ -14,7 +14,7 @@ package com.jvm.classloader.relyclass;
 public class TestOne {
 
     public static void main(String[] args) {
-        System.out.println(TestChild.sh);
+        System.out.println(TestChild.s);
     }
 }
 

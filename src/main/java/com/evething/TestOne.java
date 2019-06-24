@@ -8,7 +8,7 @@ package com.evething;
  **/
 public class TestOne {
     private int i;
-    private char ch ;
+    private char ch;
 
     public int getI() {
         return i;
@@ -28,7 +28,29 @@ public class TestOne {
 
     public static void main(String[] args) {
         TestOne testOne = new TestOne();
-        System.out.println(testOne.getI());
-        System.out.println(testOne.getI());
+        for (int i = 0; i < 10; i++) {
+            try {
+                TestException testException = new TestException(i);
+                testException.testException();
+            } catch (Exception e) {
+                System.out.println(e.getLocalizedMessage());
+            }
+        }
+    }
+}
+
+class TestException {
+    private int i;
+
+    public TestException(int i) {
+        this.i = i;
+    }
+
+    void testException() {
+        if (i == 0) {
+            int c = 0 / i;
+        } else {
+            System.out.println(i);
+        }
     }
 }
