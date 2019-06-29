@@ -22,7 +22,7 @@ public class ClassLoaderTest extends ClassLoader {
         this.path = path;
     }
 
-    ClassLoaderTest(String className) {
+    public ClassLoaderTest(String className) {
         super();
         this.className = className;
     }
@@ -34,9 +34,9 @@ public class ClassLoaderTest extends ClassLoader {
 
     public static void main(String[] args) throws Exception {
         ClassLoaderTest classLoaderTest = new ClassLoaderTest("loader");
-        //classLoaderTest.setPath("/Users/demons/IdeaProjects/JavaCode/target/classes/com/jvm/classloader/relyclass/");
-        classLoaderTest.setPath("/Users/demons/Desktop/");
-        Class aClass = classLoaderTest.loadClass("com.jvm.classloader.relyclass.TestOne");
+        classLoaderTest.setPath("/Users/demons/IdeaProjects/JavaCode/target/classes/com/jvm/classloader/relyclass/");
+        /*classLoaderTest.setPath("/Users/demons/Desktop/");*/
+        Class aClass = classLoaderTest.loadClass("com.jvm.classloader.relyclass.Test1");
         Object object = aClass.newInstance();
         System.out.println(object.getClass().getName());
 
@@ -44,7 +44,6 @@ public class ClassLoaderTest extends ClassLoader {
 
     public static void test(ClassLoader classLoader) throws Exception {
         Class<?> clazz = classLoader.loadClass("com.jvm.classloader.relyclass.TestOne");
-
         Object object = clazz.newInstance();
         System.out.println(object.getClass().getName());
 
@@ -54,7 +53,7 @@ public class ClassLoaderTest extends ClassLoader {
     protected Class<?> findClass(String name) {
         System.out.println("find Class :" + name);
         byte[] data = loadClassData(name);
-        return defineClass(className, data, 0, data.length);
+        return defineClass(name, data, 0, data.length);
     }
 
     @Override
@@ -64,14 +63,15 @@ public class ClassLoaderTest extends ClassLoader {
                 '}';
     }
 
-    private byte[] loadClassData(String name) {
-        System.out.println("name:" + name);
+    private byte[] loadClassData(String className) {
+        System.out.println("className:" + className);
         InputStream is = null;
         byte[] data = null;
         ByteArrayOutputStream byteArrayOutputStream = null;
         try {
-            name = name.replace(".", "/");
-            is = new FileInputStream(new File(path + name + fileExtension));
+            className = className.replace(".", "/");
+            System.out.println(className);
+            is = new FileInputStream(new File(path + className + fileExtension));
             byteArrayOutputStream = new ByteArrayOutputStream();
             int ch;
             while (-1 != (ch = is.read())) {
