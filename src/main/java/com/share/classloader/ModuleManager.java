@@ -32,7 +32,9 @@ public class ModuleManager {
         if (entryName.charAt(0) == '/') {
             entryName = entryName.substring(1);
         }
+
         entryName = entryName.replace("/", ".");
+        System.err.println("entryName :" + entryName);
         return entryName.substring(0, entryName.length() - 6);
     }
 
@@ -59,6 +61,7 @@ public class ModuleManager {
                         try {
                             Class<?> clazz = classLoader.loadClass(className);
                             //缓存jar 里面的 Class 对象。
+                            System.err.println("cache class :" + clazz.getName());
                             cache.put(className, clazz);
                         } catch (Throwable t) {
 
@@ -85,15 +88,11 @@ public class ModuleManager {
 
     }
 
-    public Map<String, Class> getCache() {
+    Map<String, Class> getCache() {
         return cache;
     }
 
-    public List<String> getMoudleList() {
-        return moudleList;
-    }
-
-    public void setMoudleList(List<String> moudleList) {
+    void setMoudleList(List<String> moudleList) {
         this.moudleList = moudleList;
     }
 }
