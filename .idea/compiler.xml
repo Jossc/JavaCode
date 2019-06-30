@@ -8,8 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="basics-code" />
         <module name="basics.code" />
-        <module name="JavaCode" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="moduleA" target="8" />
+      <module name="moduleB" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
