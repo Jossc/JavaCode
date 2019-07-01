@@ -1,7 +1,5 @@
 package com.match;
 
-import com.basics.ClassLoaderTest.classPathTest.ClassLoaderTest;
-
 /**
  * @ClassName: ConextClassLoadTest
  * @Description TODO

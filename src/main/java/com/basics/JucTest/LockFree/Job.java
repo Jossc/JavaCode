@@ -23,7 +23,7 @@ public class Job  extends  Thread{
         try {
             lock.lock();
             System.out.println("this thread :" + Thread.currentThread().getId());
-            System.out.println("Lock by [" + getName() + "], Waiting by " + ((ReentrantLockTest) lock).getQueue());
+            System.out.println("lock by [" + getName() + "], Waiting by " + ((ReentrantLockTest) lock).getQueue());
         }finally {
             lock.unlock();
         }

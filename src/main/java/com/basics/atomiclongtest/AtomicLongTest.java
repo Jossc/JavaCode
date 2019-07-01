@@ -21,7 +21,7 @@ public class AtomicLongTest {
         Thread oneThread = new Thread(()->{
             int size = one.length;
             for(int i =0;i<size;i++){
-                if(one[i].intValue() == 0){
+                if(one[i] == 0){
                     atomicLong.incrementAndGet();
                 }
             }

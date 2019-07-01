@@ -1,7 +1,7 @@
-package com.basics.classloadertest.BootstrapClassloaderTest;
+package com.basics.classloadertest.bootstrapclassloadertest;
 
 /**
- * @ClassName BootstrapClassloaderTest
+ * @ClassName bootstrapclassloadertest
  * @Description TODO
  * @Author chenzhuo
  * @Date 2018/9/21 15:50

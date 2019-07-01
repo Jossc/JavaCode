@@ -1,4 +1,4 @@
-package com.concurrent.volatileLearn;
+package com.concurrent.volatilelearn;
 
 /**
  * @ClassName VolatileTwo

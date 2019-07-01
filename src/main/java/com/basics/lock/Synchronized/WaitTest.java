@@ -1,4 +1,4 @@
-package com.basics.Lock.Synchronized;
+package com.basics.lock.Synchronized;
 
 
 import com.basics.ThreadCode.ThreadDemo.SleepUtils;
@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
- * PACKAGE_NAME: com.basics.Lock.Synchronized
+ * PACKAGE_NAME: com.basics.lock.Synchronized
  * MONTH_NAME_SHORT: 十月
  * USER: Clement
  *

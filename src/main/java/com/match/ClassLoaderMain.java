@@ -1,6 +1,9 @@
 package com.match;
 
 
+import com.basics.classloadertest.classpathtest.ClassLoaderTest;
+import com.basics.classloadertest.classpathtest.ObjectHello;
+
 /**
  * @ClassName: ClassLoaderMain
  * @Description TODO
@@ -11,12 +14,12 @@ public class ClassLoaderMain {
 
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
 
-        com.basics.classloadertest.classPathTest.ClassLoaderTest loadClass = (com.basics.classloadertest.classPathTest.ClassLoaderTest) ConextClassLoadTest.getThreadConextClassLoad(Thread.currentThread());
+        ClassLoaderTest loadClass = (ClassLoaderTest) ConextClassLoadTest.getThreadConextClassLoad(Thread.currentThread());
 
-        Class<?> testClass = (Class<?>) loadClass.findClass("com.basics.ClassLoaderTest.classPathTest.ObjectHello");
+        Class<?> testClass = (Class<?>) loadClass.findClass("ObjectHello");
 
-        com.basics.classloadertest.classPathTest.ObjectHello newInstance = (com.basics.classloadertest.classPathTest.ObjectHello) testClass.newInstance();
-        com.basics.classloadertest.classPathTest.ObjectHello testClass1 = new com.basics.classloadertest.classPathTest.ObjectHello();
+        ObjectHello newInstance = (ObjectHello) testClass.newInstance();
+        ObjectHello testClass1 = new ObjectHello();
 
     }
 }

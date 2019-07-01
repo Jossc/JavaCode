@@ -1,9 +1,9 @@
-package com.basics.classloadertest.classPathTest;
+package com.basics.classloadertest.classpathtest;
 
 import java.io.*;
 
 /**
- * PACKAGE_NAME: com.basics.classloadertest.classPathTest
+ * PACKAGE_NAME: com.basics.classloadertest.classpathtest
  * MONTH_NAME_SHORT: 九月
  * USER: Clement
  **/
@@ -69,7 +69,7 @@ public class ClassLoaderTest  extends  ClassLoader{
         ClassLoaderTest classLoaderTest = new ClassLoaderTest(dir);
         try {
             Class<?> c
-                     = classLoaderTest.loadClass("com.basics.classloadertest.classPathTest.ObjectHello");
+                     = classLoaderTest.loadClass("com.basics.classloadertest.classpathtest.ObjectHello");
             ObjectHello objectHello1 = (ObjectHello) c.newInstance();
             if(objectHello1 instanceof  ObjectHello ){
 

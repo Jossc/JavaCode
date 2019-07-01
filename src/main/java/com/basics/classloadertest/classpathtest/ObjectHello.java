@@ -1,7 +1,7 @@
-package com.basics.classloadertest.classPathTest;
+package com.basics.classloadertest.classpathtest;
 
 /**
- * PACKAGE_NAME: com.basics.classloadertest.classPathTest
+ * PACKAGE_NAME: com.basics.classloadertest.classpathtest
  * MONTH_NAME_SHORT: 九月
  * USER: Clement
  **/
