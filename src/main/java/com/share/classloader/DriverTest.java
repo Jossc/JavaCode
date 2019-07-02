@@ -18,7 +18,7 @@ public class DriverTest {
         //(2)
         Iterator<Driver> iterator = loader.iterator();
         while (iterator.hasNext()) {
-            Driver driver = (Driver) iterator.next();
+            Driver driver = iterator.next();
             System.out.println("driver:" + driver.getClass() + ",loader:" + driver.getClass().getClassLoader());
         }
         //(3)

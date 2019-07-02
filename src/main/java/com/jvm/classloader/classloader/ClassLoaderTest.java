@@ -22,7 +22,7 @@ public class ClassLoaderTest extends ClassLoader {
         this.path = path;
     }
 
-    ClassLoaderTest(String className) {
+    public ClassLoaderTest(String className) {
         super();
         this.className = className;
     }
