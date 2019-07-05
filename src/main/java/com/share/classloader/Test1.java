@@ -17,9 +17,9 @@ public class Test1 {
         System.out.println("Hello World!");
         ModuleManager manager = new ModuleManager();
         List<String> jarList = new ArrayList<String>();
-        jarList.add("/Users/demons/IdeaProjects/JavaCode/moduleB/target/moduleBTest-1.0-SNAPSHOT.jar");
+        jarList.add("/Users/mac/Desktop/JavaCode/moduleB/target/moduleBTest-1.0-SNAPSHOT.jar");
         jarList.add(
-                "/Users/demons/IdeaProjects/JavaCode/moduleA/target/moduleTest-1.0-SNAPSHOT.jar");
+                "/Users/mac/Desktop/JavaCode/moduleA/target/moduleTest-1.0-SNAPSHOT.jar");
         manager.setMoudleList(jarList);
         manager.init();
 

@@ -18,9 +18,15 @@ import java.util.jar.JarFile;
  * @Date 2019-06-30 14:22
  **/
 public class ModuleManager {
-    private ExecutorService executor = Executors.newFixedThreadPool(8);
-    private Map<String, Class> cache = new ConcurrentHashMap<>();
-    private List<String> moudleList = new ArrayList<>();
+
+    private ExecutorService executor =
+            Executors.newFixedThreadPool(8);
+
+    private Map<String, Class> cache =
+            new ConcurrentHashMap<>();
+
+    private List<String> moudleList =
+            new ArrayList<>();
 
 
     private String getClassName(JarEntry entry) {
@@ -57,7 +63,6 @@ public class ModuleManager {
                         if (className == null) {
                             continue;
                         }
-
                         try {
                             Class<?> clazz = classLoader.loadClass(className);
                             //缓存jar 里面的 Class 对象。

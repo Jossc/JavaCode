@@ -10,7 +10,9 @@ import java.net.URL;
  **/
 public class BootstrapClassloader1 {
     public static void main(String[] args) {
-        URL[] urls = sun.misc.Launcher.getBootstrapClassPath().getURLs();
+        URL[] urls =
+                sun.misc.Launcher.getBootstrapClassPath()
+                        .getURLs();
         for (URL url : urls) {
             System.out.println(url.toExternalForm());
         }
