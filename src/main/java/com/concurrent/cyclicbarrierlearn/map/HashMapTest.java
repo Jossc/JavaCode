@@ -15,7 +15,7 @@ public class HashMapTest {
 
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new Thread(() -> {
-            for (int i = 1; i <= 100000; i++) {
+            for (int i = 1; i <= 100; i++) {
                 int result = i;
                 new Thread(() -> hashMap.put(result, result), "cc" + i).start();
             }
@@ -24,7 +24,7 @@ public class HashMapTest {
         t1.start();
         Thread.sleep(5000);
         System.err.println("11");
-        for (int i = 1; i <= 100000; i++) {
+        for (int i = 1; i <= 100; i++) {
             Integer value = (Integer) hashMap.get(i);
             if (value == null) {
                 System.out.println(i + "数据丢失");
