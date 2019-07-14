@@ -1,5 +1,4 @@
 package com.basics.UnsafeTest.unsafe_voliate.model;
-
 /**
  * @ClassName SuperObject
  * @Description TODO
@@ -8,5 +7,12 @@ package com.basics.UnsafeTest.unsafe_voliate.model;
  * @Version 1.0
  **/
 public class SuperObject {
-    long  SuperObjectLong;
+
+
+    public static void main(String[] args) {
+     int num =68;
+     char c = (char) num;
+     System.out.println(c);
+    }
+
 }

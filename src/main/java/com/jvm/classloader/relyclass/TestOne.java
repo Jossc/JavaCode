@@ -13,12 +13,28 @@ package com.jvm.classloader.relyclass;
  **/
 public class TestOne {
 
-    static {
-        System.err.println("classPath :" + TestOne.class.getClassLoader());
-    }
-
     public static void main(String[] args) {
-
+        TestChild testChild  = new TestChild();
     }
 }
 
+class TestOneParent {
+    /**
+     * 如果是final static 修饰，在编译期间就会确定和初始化值，如果有子类或者自身引用 不会初始化static
+     */
+    public static final String sh = "skr skr";
+
+    public static String s = "Hello word";
+
+    static {
+        System.out.println("this  static  block");
+    }
+
+}
+
+class TestChild extends TestOneParent {
+    public static String skr = "skr";
+    static {
+        System.out.println("child  one static  block");
+    }
+}

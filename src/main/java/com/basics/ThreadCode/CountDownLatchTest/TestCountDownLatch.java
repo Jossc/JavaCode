@@ -23,7 +23,6 @@ public class TestCountDownLatch {
         try {
             downLatch.await();
             System.err.println("objk");
-
            // executorService.shutdownNow();
         } catch (InterruptedException e) {
             e.printStackTrace();
