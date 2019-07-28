@@ -107,5 +107,12 @@
             <artifactId>spring-boot-devtools</artifactId>
             <version>1.5.17.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.14</version>
+        </dependency>
+
     </dependencies>
 </project>
