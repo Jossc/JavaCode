@@ -1,7 +1,7 @@
 package com.jvm.classloader.relyclass;
 
 /**
- * @ClassName TestOne
+ * @ClassName TestCode
  * @Author chenzhuo
  * @Version 1.0
  * @Date 2019-06-10 21:08
