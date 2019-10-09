@@ -20,6 +20,9 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>agent</module>
+    </modules>
 
 
     <dependencies>
