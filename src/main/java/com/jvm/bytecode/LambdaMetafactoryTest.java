@@ -10,5 +10,6 @@ import java.lang.invoke.LambdaMetafactory;
  **/
 public class LambdaMetafactoryTest {
     public static void main(String[] args) {
+      // LambdaMetafactory.altMetafactory()
     }
 }

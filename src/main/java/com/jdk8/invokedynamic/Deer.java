@@ -7,4 +7,8 @@ package com.jdk8.invokedynamic;
  * @Date 2019/12/2 10:36 下午
  **/
 public class Deer {
+    public void race() {
+        System.out.println("Deer.race()");
+    }
+
 }
