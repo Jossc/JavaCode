@@ -43,6 +43,12 @@ public class StackArray {
     }
 
     public static void main(String[] args) {
-
+        StackArray stackArray  = new StackArray(10);
+        stackArray.addElement("hhhhh");
+        stackArray.addElement("hhhhh1");
+        stackArray.addElement("hhhhh2");
+        stackArray.addElement("hhhhh3");
+        String value = stackArray.pop();
+        System.out.println(value);
     }
 }
