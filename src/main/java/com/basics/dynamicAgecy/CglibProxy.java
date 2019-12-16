@@ -1,7 +1,6 @@
 package com.basics.dynamicAgecy;
 
 import com.basics.agency.PerformanceMonior;
-import net.sf.cglib.proxy.Callback;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
@@ -24,11 +23,11 @@ public class CglibProxy implements MethodInterceptor {
         return enhancer.create();
     }
 
+    @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         PerformanceMonior.begin(o.getClass().getName()+"."+method.getName());
         Object result = methodProxy.invokeSuper(o, objects);
         PerformanceMonior.end();
-
         Object proxyObject =  getProxy(this.getClass());
         return result;
     }
