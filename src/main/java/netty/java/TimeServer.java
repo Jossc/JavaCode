@@ -14,6 +14,8 @@ public class TimeServer {
     public static void main(String[] args) throws IOException {
         int port = 8085;
         ServerSocket server = null;
+        TimeServerHandlerExecutePool serverHandlerExecutePool =
+                new TimeServerHandlerExecutePool(50, 100);
         try {
             // 创建服务
             server = new ServerSocket(port);
@@ -22,7 +24,8 @@ public class TimeServer {
             while (true) {
                 // 监听
                 socket = server.accept();
-                new Thread(new TimeServerHandler(socket)).start();
+                /* new Thread(new TimeServerHandler(socket)).start();*/
+                serverHandlerExecutePool.execute(new TimeServerHandler(socket));
             }
 
         } catch (IOException e) {
