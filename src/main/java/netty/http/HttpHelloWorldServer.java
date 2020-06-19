@@ -16,14 +16,15 @@ import io.netty.handler.logging.LoggingHandler;
  * @author crazy
  * @title: HttpHelloWorldServer
  * @projectName JavaCode
- * @description: netty自定义service
+ * @description: netty自定义webService 简陋版
+ *
  * @date 2020/5/3014:43
  */
 public class HttpHelloWorldServer {
 
     private static final int THREAD_NUMBER = 1;
 
-    public static void main(String[] args) {
+    public   static void main(String[] args) {
         try {
             EventLoopGroup bossGroup = new NioEventLoopGroup(THREAD_NUMBER);
             EventLoopGroup workerGroup = new NioEventLoopGroup();
