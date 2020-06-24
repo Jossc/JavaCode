@@ -17,6 +17,7 @@ public class ByteBufferTest {
         byte[] bytes = new byte[10];
         bytes[0] = 1;
         byteBuffer.put(bytes);
+        System.out.println(byteBuffer.capacity());
         System.out.println(byteBuffer.limit());
         System.out.println(byteBuffer.position());
         byteBuffer.limit(100);
