@@ -1,6 +1,5 @@
 package netty.java.nio.file;
 
-import java.io.FileNotFoundException;
 import java.io.RandomAccessFile;
 import java.nio.channels.FileChannel;
 
