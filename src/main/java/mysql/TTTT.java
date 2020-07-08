@@ -1,10 +1,5 @@
 package mysql;
 
-import com.github.shyiko.mysql.binlog.BinaryLogFileReader;
-import com.github.shyiko.mysql.binlog.event.Event;
-import com.github.shyiko.mysql.binlog.event.deserialization.ChecksumType;
-import com.github.shyiko.mysql.binlog.event.deserialization.EventDeserializer;
-
 import java.io.File;
 import java.io.IOException;
 
@@ -17,7 +12,7 @@ import java.io.IOException;
  */
 public class TTTT {
     public static void main(String[] args) throws IOException {
-        String filePath="/Users/crazy/Downloads/mysql_bin.000304";
+       /* String filePath="/Users/crazy/Downloads/mysql_bin.000304";
         File binlogFile = new File(filePath);
         EventDeserializer eventDeserializer = new EventDeserializer();
         eventDeserializer.setChecksumType(ChecksumType.CRC32);
@@ -25,6 +20,6 @@ public class TTTT {
         for (Event event; (event = reader.readEvent()) != null; ) {
             System.out.println(event.toString());
         }
-        reader.close();
+        reader.close();*/
     }
 }
