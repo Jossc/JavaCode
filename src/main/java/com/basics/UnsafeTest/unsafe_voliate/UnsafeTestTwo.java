@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @Date 2018/8/22 11:20
  * @Version 1.0
  *
- * pageSize :4096
+ * pageSize 内存页大小 :4096
  * address  :8  变量指针的长度（4/8 32/64系统）
  * anLong :12
  **/

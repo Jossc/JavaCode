@@ -17,9 +17,11 @@ public class BufferTest {
         System.out.println("capacity :" + buffer.capacity());
         System.out.println("limit : " + buffer.limit());
         System.out.println("position : " + buffer.position());
+        System.out.println("make  : " + buffer.mark());
         buffer.put('a');
         buffer.put('b');
         buffer.put('c');
+        buffer.reset();
         System.out.println("加入三个元素 position :" + buffer.position());
         buffer.flip();
         System.out.println("执行flip 后:limit = " + buffer.limit());
