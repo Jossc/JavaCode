@@ -15,6 +15,5 @@ public class ByteBufferTest1 {
         //直接缓冲区 直接在内存汇总
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(1024);
 
-        Class c = java.nio.Bits.class;
     }
 }
