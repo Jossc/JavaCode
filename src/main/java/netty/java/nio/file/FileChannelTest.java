@@ -18,7 +18,7 @@ public class FileChannelTest {
 
     public static void main(String[] args) throws Exception {
         RandomAccessFile randomAccessFile
-                = new RandomAccessFile("/Users/crazy/Downloads/陈卓后端简历.pdf", "rws");
+                = new RandomAccessFile("/Users/crazy/Downloads/", "rws");
         FileChannel channel = randomAccessFile.getChannel();
         ByteBuffer buf = ByteBuffer.allocate(48);
         ByteBuffer buffer = ByteBuffer.allocate(48);
