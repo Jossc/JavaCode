@@ -16,7 +16,6 @@ public class ChannelMapBufferTest {
 
     public static void main(String[] args) {
         new ChannelMapBufferTest().testMapBuffer();
-
     }
 
     public void testMapBuffer() {
