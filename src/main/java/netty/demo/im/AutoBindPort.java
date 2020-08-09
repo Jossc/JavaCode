@@ -1,4 +1,4 @@
-package netty.demo;
+package netty.demo.im;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelDuplexHandler;
@@ -9,6 +9,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
+import netty.demo.im.handler.ServerHandler;
 
 import static jdk.nashorn.internal.objects.NativeFunction.bind;
 
@@ -29,9 +30,10 @@ public class AutoBindPort {
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     protected void initChannel(NioSocketChannel ch) {
+                        ch.pipeline().addLast(new ServerHandler());
                     }
                 });
-        autoBindPort(serverBootstrap,1);
+        autoBindPort(serverBootstrap, 8080);
     }
 
     public static void autoBindPort(final ServerBootstrap serverBootstrap, int port) {
