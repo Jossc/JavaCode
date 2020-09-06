@@ -1,6 +1,5 @@
 ## 分代担保学习
 
-
 ~~~~ java 
 private static final int DEF_MB = 1024 * 1024;
 
