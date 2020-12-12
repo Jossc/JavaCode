@@ -10,7 +10,7 @@ import java.util.concurrent.BlockingQueue;
  * @ClassName Consumer.java
  * @createTime 2020年07月17日 22:10:00
  */
-public class Consumer {
+public class ConsumerConsumer {
 
     ArrayBlockingQueue storage;
 
